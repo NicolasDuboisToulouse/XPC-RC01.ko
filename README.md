@@ -2,8 +2,8 @@
 
 What is is device : https://www.google.com/search?q=xpc-rc01&source=lnms&tbm=isch
 
-I don't have the remote, but only the receiver. Maybe you have it somewhere in a box ?\
-Anyway, Logitech Harmony have it in its database... (I Hope Logitech reconize this ad for them...)
+I don't have the remote, but only the receiver. Do you also have the receiver somewhere in a box ?\
+Anyway, Logitech Harmony have it in its database, so the remote is useless... (I Hope Logitech will reconize my sponsoring...)
 
 
 ## Issue with this device
