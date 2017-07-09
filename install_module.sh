@@ -1,9 +1,9 @@
 INVALID_MODULE=hid_zydacron
-MODULE=hid-xpcrc01.ko
+MODULE=hid-xpc-rc01.ko
 HERE=$(cd `dirname $0`; pwd)
 
 
-rmmod hid-xpcrc01
+rmmod $MODULE
 rmmod $INVALID_MODULE
 insmod $HERE/$MODULE
 
