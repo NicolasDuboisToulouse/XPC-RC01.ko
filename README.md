@@ -1,37 +1,33 @@
-XPC-RC01 - Linux kernel module 
-============================== 
+XPC-RC01 - Linux kernel module
+==============================
 
-What is this device : https://www.google.com/search?q=xpc-rc01&source=lnms&tbm=isch 
+What is this device : https://www.google.com/search?q=xpc-rc01&source=lnms&tbm=isch
 
 I don't have the remote, but only the receiver. Do you also have the receiver somewhere in a box ?\
-Anyway, Logitech Harmony have it in its database, so the remote is useless... (I Hope Logitech will recognize my sponsoring...) 
+Anyway, Logitech Harmony have it in its database, so the remote is useless... (I Hope Logitech will recognize my sponsoring...)
 
 Issue with this device
----------------------- 
+----------------------
 When you plug it, it is recognized as an HID keyboard. Fine ! But most of the commands doesn't work.\
 The device emit invalid keyboard code for most of the keys. I Think there is a driver for Windows...
 
-Originally, the device really doesn't work. With recent kernel, the driver hid_zydacron is loaded and seems works, almost for some keys. I don't try it. 
+Originally, the device really doesn't work. But with recent kernel, the driver hid_zydacron is loaded and seems works, almost for some keys. I don't try it too much.
 
-Remarks: 
-* The device send keydown event and immediately keyup event. No event are sent on real key up. 
-* Some keys support repeat (see table below). In this case the remote will repeat keydown and keyup events. 
+Remarks:
+* The device send keydown event and immediately keyup event. No event are sent on real key up.
+* Some keys support repeat (see table below). In this case the remote will repeat keydown and keyup events.
 
 
 What the driver is ?
 --------------------
-This driver send valid keyboard keycode for a Logitech Harmony remote configured for MSI/XPC-RC01.\
-Not all Harmony command works. Moreover, there are missing key. See the table below.\
-You can also use :
-* Packard Bell / Suttle XPC G (don't forget the 'G'),
-* Record command from original remote. 
-
-In both cases, you may need to update keys send by the driver. 
-
+This driver send keyboard keycodes for each known working remote. (see table below).
+The keycodes are all standard ones, no *multimedia* keys. (i.e. all code are < 128).
+You have to map your harmony remove regarding the devide you want to control.
+If some keys are not fine for your usage, you have to modify the driver (or change the keyboard mapping). There is no configuration files.
 
 Tested Devices
--------------- 
-* Original : What send the original remove (I think, since I lost it). The key below it what I had recorded when I add it (maybe plus some key from Harmony/MSI)
+--------------
+* Original : What send the original remove (I think, since I lost it). The key below it what I had recorded when I add it (maybe plus some keys from Harmony/MSI)
 * Harmony, manufacturer MSI, remote xpc-rc01
 * Harmony, manufacturer Packard Bell, remote Suttle XPC - DOES NO WORK
 * Harmony, manufacturer Packard Bell, remote Suttle XPC G (work, see the 'G')
@@ -41,14 +37,14 @@ Tested Devices
 Key table
 ---------
 * The names of the key are the Harmony ones.
-* I'm not sure of the name of the key for the original remote. In most case it's the MSI Harmony ones. 
+* I'm not sure of the name of the key for the original remote. In most case it's the MSI Harmony ones.
+* Keyboard mapping is not in this table: it depend on what it wrote in the driver and I don't want to sychronize the files. So, look in driver code !
 
 
 ### Harmony commands that not working
 
 | MSI            | Suttle XPC G   |
 |----------------|----------------|
-| TvVideo        | TVVideo        |
 |                | Skip           |
 |                | Ok             |
 |                | FastForward    |
@@ -88,8 +84,7 @@ Key table
 | 04 10 00 00 00 00 00 00 | NO     | ORIG_GREEN     | Picture        | Live           |
 | 04 20 00 00 00 00 00 00 | NO     | ORIG_BLUE      | Video          | Guide          |
 | 04 80 00 00 00 00 00 00 | NO     | ORIG_YELLOW    | DVDMenu        |                |
-| 05 00 01 00 00 00 00 00 | NO     | Play           | Play           | Pause          |
-|                         | NO     | Pause          | Pause          |                |
+| 05 00 01 00 00 00 00 00 | NO     | Play & Pause   | Play & Pause   | Pause          |
 | 05 00 02 00 00 00 00 00 | NO     | Record         | Record         | InputTuner     |
 | 05 00 04 00 00 00 00 00 | YES    | FastForward    | FastForward    | ChannelUp      |
 | 05 00 08 00 00 00 00 00 | YES    | Rewind         | Rewind         | VolumeUp       |

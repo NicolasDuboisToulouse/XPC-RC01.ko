@@ -32,100 +32,111 @@ struct xpc_sc {
 
 static s32 raw_data_to_key(u8 *raw_data)
 {
+
+  //                                              | REPEAT | Original       | MSI            | Suttle XPC G   |
+
   switch (raw_data[0])
   {
-  //Field enum 1 : Standard keys.
+  //Field enum 1
   case 0x01:
     switch (raw_data[5]) {
-    case 0x1E: return KEY_1;
-    case 0x1F: return KEY_2;
-    case 0x20: return KEY_3;
-    case 0x21: return KEY_4;
-    case 0x22: return KEY_5;
-    case 0x23: return KEY_6;
-    case 0x24: return KEY_7;
-    case 0x25: return KEY_8;
-    case 0x26: return KEY_9;
-    case 0x27: return KEY_SPACE;
-    case 0x28: return KEY_ENTER;
-    case 0x2A: return KEY_M;
-    case 0x4F: return KEY_RIGHT;
-    case 0x50: return KEY_LEFT;
-    case 0x51: return KEY_DOWN;
-    case 0x52: return KEY_UP;
+    case 0x00: return KEY_F4;                  // | NO     |                |                | Replay         |
+    case 0x1E: return KEY_1;                   // | YES    | 1              | 1              | 1              |
+    case 0x1F: return KEY_2;                   // | YES    | 2              | 2              | 2              |
+    case 0x20: return KEY_3;                   // | YES    | 3              | 3              | 3              |
+    case 0x21: return KEY_4;                   // | YES    | 4              | 4              | 4              |
+    case 0x22: return KEY_5;                   // | YES    | 5              | 5              | 5              |
+    case 0x23: return KEY_6;                   // | YES    | 6              | 6              | 6              |
+    case 0x24: return KEY_7;                   // | YES    | 7              | 7              | 7              |
+    case 0x25: return KEY_8;                   // | YES    | 8              | 8              | 8              |
+    case 0x26: return KEY_9;                   // | YES    | 9              | 9              | 9              |
+    case 0x27: return KEY_0;                   // | YES    | 0              | 0              | 0              |
+    case 0x28: return KEY_ENTER;               // | YES    | Select         | Select         | Play           |
+    case 0x2A: return KEY_BACKSPACE;           // | YES    | Back           | Back           | Back           |
+    case 0x4F: return KEY_RIGHT;               // | YES    | DirectionRight | DirectionRight | DirectionRight |
+    case 0x50: return KEY_LEFT;                // | YES    | DirectionLeft  | DirectionLeft  | DirectionLeft  |
+    case 0x51: return KEY_DOWN;                // | YES    | DirectionDown  | DirectionDown  | DirectionDown  |
+    case 0x52: return KEY_UP;                  // | YES    | DirectionUp    | DirectionUp    | DirectionUp    |
     }
 
     return KEY_RESERVED;
 
 
-  //Field enum 2 : Control-keys. No repeat.
+  //Field enum 2
   case 0x02:
     switch(raw_data[1])
     {
-    case 0x10: return KEY_F10;
-    case 0x30: return KEY_SPACE;
-    case 0x70: return KEY_I;
+    case 0x10: return KEY_F1;                  // | NO     | ORIG_TOGGLE    |                | Record         |
+    case 0x30: return KEY_F2;                  // | YES    | ORIG_CAMERA    |                | Repeat         |
+    case 0x70: return KEY_F3;                  // | YES    | ORIG_INFO      |                | Shuffle        |
     }
 
     return KEY_RESERVED;
 
 
-  //Field enum 3 : Radio-key. No repeat.
+  //Field enum 3
   case 0x03:
-    if (raw_data[1] == 0x04) return KEY_F2;
+    switch(raw_data[1])
+    {
+    case 0x04: return KEY_F10;                 // | NO     | Radio          | Radio          |                |
+    }
+
     return KEY_RESERVED;
 
 
-  //Field enum 4 : Extra keys. No repeat. Convert them to FX.
+  //Field enum 4
   case 0x04:
     switch(raw_data[1])
     {
-    case 0x01: return KEY_I;
-    case 0x02: return KEY_BACKSPACE;
-    case 0x08: return KEY_A;
-    case 0x10: return KEY_ESC;
-    case 0x20: return KEY_Z;
-    case 0x80: return KEY_SPACE;
-
     case 0x00:
       switch(raw_data[2])
       {
-      case 0x04: return KEY_C;
-      case 0x20: return KEY_SEMICOLON;
+      case 0x04: return KEY_F5;                // | NO     | ORIG_MENU      |                | Info           |
+      case 0x20: return KEY_F11;               // | NO     | ORIG_TV_TEXT   | Close          |                |
       }
+    case 0x01: return KEY_F12;                 // | NO     | ORIG_HOME      |                | InputMusic     |
+    case 0x02: return KEY_T;                   // | NO     | TV             | TV             |                |
+    case 0x08: return KEY_E;                   // | NO     | ORIG_RED       | Music          | Eject          |
+    case 0x10: return KEY_F9;                  // | NO     | ORIG_GREEN     | Picture        | Live           |
+    case 0x20: return KEY_V;                   // | NO     | ORIG_BLUE      | Video          | Guide          |
+    case 0x80: return KEY_D;                   // | NO     | ORIG_YELLOW    | DVDMenu        |                |
     }
 
     return KEY_RESERVED;
 
 
-  //Field enum 5: Multimedia keys.
+  //Field enum 5
   case 0x05:
     switch(raw_data[1])
     {
-    case 0x01: return KEY_KPPLUS;    //VOL +
-    case 0x02: return KEY_KPMINUS;   //VOL -
-    case 0x04: return KEY_F8;        //MUTE
-    case 0x08: return KEY_PAGEUP;    //CHANNEL +
-    case 0x10: return KEY_PAGEDOWN;  //CHANNEL -
-
     case 0x00:
       switch(raw_data[2])
       {
-      case 0x01: return KEY_P;   //PLAY
-      case 0x02: return KEY_F9;  //RECORD
-      case 0x04: return KEY_F;   //FORWARD
-      case 0x08: return KEY_R;   //BACKWARD
-      case 0x10: return KEY_DOT;
-      case 0x20: return KEY_M;
-      case 0x40: return KEY_X;
+      case 0x01: return KEY_P;                 // | NO     | Play & Pause   | Play & Pause   | Pause          |
+      case 0x02: return KEY_F6;                // | NO     | Record         | Record         | InputTuner     |
+      case 0x04: return KEY_F;                 // | YES    | FastForward    | FastForward    | ChannelUp      |
+      case 0x08: return KEY_R;                 // | YES    | Rewind         | Rewind         | VolumeUp       |
+      case 0x10: return KEY_F7;                // | NO     | Skip           | Skip           | Rewind         |
+      case 0x20: return KEY_F8;                // | NO     | ORIG_PREVIOUS  | Replay         | Stop           |
+      case 0x40: return KEY_S;                 // | NO     | Stop           | Stop           | InputTv        |
       }
+    case 0x01: return KEY_KPPLUS;              // | YES    | VolumeUp       | VolumeUp       | VolumeDown     |
+    case 0x02: return KEY_KPMINUS;             // | YES    | VolumeDown     | VolumeDown     | InputVideo     |
+    case 0x04: return KEY_M;                   // | NO     | Mute           | Mute           | Mute           |
+    case 0x08: return KEY_PAGEUP;              // | YES    | ChannelUp      | ChannelUp      | ChannelDown    |
+    case 0x10: return KEY_PAGEDOWN;            // | YES    | ChannelDown    | ChannelDown    | InputPicture   |
     }
+
     return KEY_RESERVED;
 
 
-  //Field enum 6 : Power-off key. No-repeat.
+  //Field enum 6
   case 0x06:
-    if (raw_data[1] == 0x02) return KEY_S;
+    switch(raw_data[1])
+    {
+    case 0x02: return KEY_END;                 // | NO     | PowerToggle    | PowerToggle    | PowerToggle    |
+    }
+
     return KEY_RESERVED;
 
 
@@ -159,7 +170,7 @@ static int xpc_raw_event(struct hid_device *hdev, struct hid_report *report,
   struct hid_input *hidinput = list_entry(hdev->inputs.next, struct hid_input, list);
   s32 key = raw_data_to_key(raw_data);
 
-  //DEBUG  print_data(raw_data, size);
+  //DEBUG print_data(raw_data, size);
 
 
   if (!(hdev->claimed & HID_CLAIMED_INPUT))
