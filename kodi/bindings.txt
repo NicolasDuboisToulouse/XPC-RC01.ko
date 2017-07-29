@@ -1,0 +1,83 @@
+| HID raw data            | REPEAT | Harmony      | Kino (depend on mode, see keyboard.xml)       | Original       | MSI            | Suttle XPC G   |
+|-------------------------+--------+--------------+-----------------------------------------------+----------------+----------------+----------------|
+| 01 00 00 00 00 00 00 00 | NO     |              |                                               |                |                | Replay         |
+| 01 00 00 00 00 1E 00 00 | YES    |              |                                               | 1              | 1              | 1              |
+| 01 00 00 00 00 1F 00 00 | YES    |              |                                               | 2              | 2              | 2              |
+| 01 00 00 00 00 20 00 00 | YES    |              |                                               | 3              | 3              | 3              |
+| 01 00 00 00 00 21 00 00 | YES    |              |                                               | 4              | 4              | 4              |
+| 01 00 00 00 00 22 00 00 | YES    |              |                                               | 5              | 5              | 5              |
+| 01 00 00 00 00 23 00 00 | YES    |              |                                               | 6              | 6              | 6              |
+| 01 00 00 00 00 24 00 00 | YES    |              |                                               | 7              | 7              | 7              |
+| 01 00 00 00 00 25 00 00 | YES    |              |                                               | 8              | 8              | 8              |
+| 01 00 00 00 00 26 00 00 | YES    |              |                                               | 9              | 9              | 9              |
+| 01 00 00 00 00 27 00 00 | YES    |              |                                               | 0              | 0              | 0              |
+| 01 00 00 00 00 28 00 00 | YES    | OK           | Select/Queue/OSD/Rotate                       | Select         | Select         | Play           |
+| 01 00 00 00 00 2A 00 00 | YES    | Return       | Back/Backspace/Close                          | Back           | Back           | Back           |
+| 01 00 00 00 00 4F 00 00 | YES    | <            | Right/StepForward                             | DirectionRight | DirectionRight | DirectionRight |
+| 01 00 00 00 00 50 00 00 | YES    | >            | Left/StepBack                                 | DirectionLeft  | DirectionLeft  | DirectionLeft  |
+| 01 00 00 00 00 51 00 00 | YES    | Down         | Down/ChapterOrBigStepBack/SkipPrevious        | DirectionDown  | DirectionDown  | DirectionDown  |
+| 01 00 00 00 00 52 00 00 | YES    | Up           | Up/ChapterOrBigStepForward/SkipNext           | DirectionUp    | DirectionUp    | DirectionUp    |
+| 02 10 00 00 00 00 00 00 | NO     | Blue         | Menu/OSD/Back                                 | ORIG_TOGGLE    |                | Record         |
+| 02 30 00 00 00 00 00 00 | YES    | Live         | Delete/Playlist                               | ORIG_CAMERA    |                | Repeat         |
+| 02 70 00 00 00 00 00 00 | YES    |              |                                               | ORIG_INFO      |                | Shuffle        |
+| 03 04 00 00 00 00 00 00 | NO     | Info         | Info                                          | Radio          | Radio          |                |
+| 04 00 04 00 00 00 00 00 | NO     |              |                                               | ORIG_MENU      |                | Info           |
+| 04 00 20 00 00 00 00 00 | NO     | Guide        | Playlist                                      | ORIG_TV_TEXT   | Close          |                |
+| 04 01 00 00 00 00 00 00 | NO     |              |                                               | ORIG_HOME      |                | InputMusic     |
+| 04 02 00 00 00 00 00 00 | NO     | Menu         | ContextMenu/OSD/Back                          | TV             | TV             |                |
+| 04 08 00 00 00 00 00 00 | NO     | BigUp        | MoveItemUp                                    | ORIG_RED       | Music          | Eject          |
+| 04 10 00 00 00 00 00 00 | NO     | BigDown      | MoveItemDown                                  | ORIG_GREEN     | Picture        | Live           |
+| 04 20 00 00 00 00 00 00 | NO     |              |                                               | ORIG_BLUE      | Video          | Guide          |
+| 04 80 00 00 00 00 00 00 | NO     |              |                                               | ORIG_YELLOW    | DVDMenu        |                |
+| 05 00 01 00 00 00 00 00 | NO     | Play & Pause | PlayPause                                     | Play & Pause   | Play & Pause   | Pause          |
+| 05 00 02 00 00 00 00 00 | NO     | DVR          | Menu                                          | Record         | Record         | InputTuner     |
+| 05 00 04 00 00 00 00 00 | YES    | Forward      | FastForward                                   | FastForward    | FastForward    | ChannelUp      |
+| 05 00 08 00 00 00 00 00 | YES    | Rewind       | Rewind                                        | Rewind         | Rewind         | VolumeUp       |
+| 05 00 10 00 00 00 00 00 | NO     | Next         | SkipNext/NextPicture                          | Skip           | Skip           | Rewind         |
+| 05 00 20 00 00 00 00 00 | NO     | Previous     | SkipPrevious/PreviousPicture                  | ORIG_PREVIOUS  | Replay         | Stop           |
+| 05 00 40 00 00 00 00 00 | NO     | Stop         | Stop                                          | Stop           | Stop           | InputTv        |
+| 05 01 00 00 00 00 00 00 | YES    | V+           | VolumeUp/ZoomOut                              | VolumeUp       | VolumeUp       | VolumeDown     |
+| 05 02 00 00 00 00 00 00 | YES    | V-           | VolumeDown/ZoomIn                             | VolumeDown     | VolumeDown     | InputVideo     |
+| 05 04 00 00 00 00 00 00 | NO     | Mute         | Mute                                          | Mute           | Mute           | Mute           |
+| 05 08 00 00 00 00 00 00 | YES    | Ch+          | PageUp/StepForward/IncreaseRating/SkipNext    | ChannelUp      | ChannelUp      | ChannelDown    |
+| 05 10 00 00 00 00 00 00 | YES    | Ch-          | PageDown/StepBack/DecreaseRating/SkipPrevious | ChannelDown    | ChannelDown    | InputPicture   |
+| 06 02 00 00 00 00 00 00 | NO     | PowerT       | ShutDown()                                    | PowerToggle    | PowerToggle    | PowerToggle    |
+
+
+
+>ContextMenu<
+
+
+
+
+check:       
+
+<global><keyboard><escape>PreviousMenu</escape></global>
+<FullscreenVideo><keyboard><z>AspectRatio</z>
+<FullscreenVideo><return>OSD</return>
+<Music><keyboard><q>Queue</q>
+<MusicPlaylist><keyboard><u>MoveItemUp</u>      (et autres playlist cf keyboard.xml)
+<MusicPlaylist><keyboard><d>MoveItemDown</d>    (et autres playlist cf keyboard.xml)
+
+
+
+Available is OSD ?
+ShowSubtitles
+NextSubtitle
+SubtitleDelayMinus
+SubtitleDelayPlus
+AudioDelayMinus
+AudioDelayPlus
+AudioNextLanguage
+
+Autres:
+
+ShowTime
+NextPicture != SkipNext ?
+PreviousPicture != SkipPrevious ?
+Container.NextSortMethod
+XBMC.ActivateWindow(MyMusic)
+
+
+Debug:
+reloadkeymaps
