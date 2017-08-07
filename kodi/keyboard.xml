@@ -3,250 +3,249 @@
 
   <global>
     <keyboard>
-      <f>FastForward</f>                     <!-- original -->
-      <r>Rewind</r>                          <!-- original -->
-      <left>Left</left>                      <!-- original -->
-      <right>Right</right>                   <!-- original -->
-      <up>Up</up>                            <!-- original -->
-      <down>Down</down>                      <!-- original -->
-      <pageup>PageUp</pageup>                <!-- original -->
-      <pagedown>PageDown</pagedown>          <!-- original -->
-      <return>Select</return>                <!-- original -->
-      <enter>Select</enter>                  <!-- original -->
-      <backspace>Back</backspace>            <!-- original -->
-      <t>ContextMenu</t>                     <!-- Rebinded -->
-      <f1>Menu</f1>                          <!-- Rebinded -->
-      <m>Mute</m>                            <!-- Rebinded -->
-      <f10>Info</f10>                        <!-- Rebinded -->
-      <s>Stop</s>                            <!-- Rebinded -->
-      <end>ShutDown()</end>                  <!-- Rebinded -->
-      <f7>SkipNext</f7>                      <!-- Rebinded -->
-      <f8>SkipPrevious</f8>                  <!-- Rebinded -->
-      <minus>VolumeDown</minus>              <!-- original -->
-      <plus>VolumeUp</plus>                  <!-- original -->
-      <numpadminus>VolumeDown</numpadminus>  <!-- original -->
-      <numpadplus>VolumeUp</numpadplus>      <!-- original -->
-      <p>PlayPause</p>                       <!-- Rebinded -->
-      <f11>Playlist</f11>                    <!-- Rebinded -->
-      <e>MoveItemUp</e>                      <!-- Rebinded -->
-      <f9>MoveItemDown</f9>                  <!-- Rebinded -->
+      <f>FastForward</f>                    <!-- original -->
+      <r>Rewind</r>                         <!-- original -->
+      <left>Left</left>                     <!-- original -->
+      <right>Right</right>                  <!-- original -->
+      <up>Up</up>                           <!-- original -->
+      <down>Down</down>                     <!-- original -->
+      <pageup>PageUp</pageup>               <!-- original -->
+      <pagedown>PageDown</pagedown>         <!-- original -->
+      <return>Select</return>               <!-- original -->
+      <enter>Select</enter>                 <!-- original -->
+      <backspace>Back</backspace>           <!-- original -->
+      <t>ContextMenu</t>                    <!-- Rebinded -->
+      <v>Playlist</v>                       <!-- Rebinded -->
+      <m>Mute</m>                           <!-- Rebinded -->
+      <f10>Info</f10>                       <!-- Rebinded -->
+      <s>Stop</s>                           <!-- Rebinded -->
+      <end>ShutDown()</end>                 <!-- Rebinded -->
+      <f7>SkipNext</f7>                     <!-- Rebinded -->
+      <f8>SkipPrevious</f8>                 <!-- Rebinded -->
+      <minus>VolumeDown</minus>             <!-- original -->
+      <plus>VolumeUp</plus>                 <!-- original -->
+      <numpadminus>VolumeDown</numpadminus> <!-- original -->
+      <numpadplus>VolumeUp</numpadplus>     <!-- original -->
+      <p>PlayPause</p>                      <!-- Rebinded -->
+      <f11>Playlist</f11>                   <!-- Rebinded -->
+      <e>MoveItemUp</e>                     <!-- Rebinded -->
+      <f9>MoveItemDown</f9>                 <!-- Rebinded -->
+      <f6>Queue</f6>                        <!-- Rebinded -->
     </keyboard>
   </global>
 
   <LoginScreen>
     <keyboard>
-      <end>ShutDown()</end>                  <!-- Rebinded -->
+      <end>ShutDown()</end>                 <!-- Rebinded -->
     </keyboard>
   </LoginScreen>
 
   <VirtualKeyboard>
     <keyboard>
-      <left>Left</left>                      <!-- original -->
-      <right>Right</right>                   <!-- original -->
-      <up>Up</up>                            <!-- original -->
-      <down>Down</down>                      <!-- original -->
-      <return>Select</return>                <!-- original -->
-      <enter>Select</enter>                  <!-- original -->
-      <backspace>Backspace</backspace>       <!-- original -->
+      <left>Left</left>                     <!-- original -->
+      <right>Right</right>                  <!-- original -->
+      <up>Up</up>                           <!-- original -->
+      <down>Down</down>                     <!-- original -->
+      <return>Select</return>               <!-- original -->
+      <enter>Select</enter>                 <!-- original -->
+      <backspace>Backspace</backspace>      <!-- original -->
     </keyboard>
   </VirtualKeyboard>
 
   <FileManager>
     <keyboard>
-      <delete>noop</delete>                  <!-- Rebinded -->
-      <m>noop</m>                            <!-- Rebinded -->
-      <r>noop</r>                            <!-- Rebinded -->
+      <delete>noop</delete>                 <!-- Rebinded -->
+      <m>noop</m>                           <!-- Rebinded -->
+      <r>noop</r>                           <!-- Rebinded -->
     </keyboard>
   </FileManager>
 
   <MusicPlaylist>
     <keyboard>
-      <f2>Delete</f2>                        <!-- Rebinded -->
-      <e>MoveItemUp</e>                      <!-- Rebinded -->
-      <f9>MoveItemDown</f9>                  <!-- Rebinded -->
-      <f11>Playlist</f11>                    <!-- Rebinded -->
+      <d>Delete</d>                         <!-- Rebinded -->
+      <e>MoveItemUp</e>                     <!-- Rebinded -->
+      <f9>MoveItemDown</f9>                 <!-- Rebinded -->
+      <f11>Playlist</f11>                   <!-- Rebinded -->
     </keyboard>
   </MusicPlaylist>
 
   <MusicPlaylistEditor>
     <keyboard>
-      <f2>Delete</f2>                        <!-- Rebinded -->
-      <e>MoveItemUp</e>                      <!-- Rebinded -->
-      <f9>MoveItemDown</f9>                  <!-- Rebinded -->
+      <d>Delete</d>                         <!-- Rebinded -->
+      <e>MoveItemUp</e>                     <!-- Rebinded -->
+      <f9>MoveItemDown</f9>                 <!-- Rebinded -->
     </keyboard>
   </MusicPlaylistEditor>
 
   <Music>
     <keyboard>
-      <return>Queue</return>                 <!-- Rebinded -->
-      <enter>Queue</enter>                   <!-- Rebinded -->
-      <f2>Playlist</f2>                      <!-- Rebinded -->
-      <f11>Playlist</f11>                    <!-- Rebinded -->
+      <d>Playlist</d>                       <!-- Rebinded -->
+      <f11>Playlist</f11>                   <!-- Rebinded -->
     </keyboard>
   </Music>
 
   <FullscreenVideo>
     <keyboard>
-      <f>FastForward</f>                     <!-- original -->
-      <r>Rewind</r>                          <!-- original -->
-      <pageup>StepForward</pageup>           <!-- Rebinded -->
-      <pagedown>StepBack</pagedown>          <!-- Rebinded -->
-      <f7>SkipNext</f7>                      <!-- Rebinded -->
-      <f8>SkipPrevious</f8>                  <!-- Rebinded -->
-      <return>OSD</return>                   <!-- original -->
-      <enter>OSD</enter>                     <!-- original -->
-      <t>OSD</t>                             <!-- Rebinded -->
-      <f1>OSD</f1>                           <!-- Rebinded -->
-      <m>Mute</m>                            <!-- Rebinded -->
-      <f10>Info</f10>                        <!-- Rebinded -->
-      <left>StepBack</left>                  <!-- original -->
-      <right>StepForward</right>             <!-- original -->
-      <up>ChapterOrBigStepForward</up>       <!-- original -->
-      <down>ChapterOrBigStepBack</down>      <!-- original -->
-      <f11>Playlist</f11>                    <!-- Rebinded -->
+      <f>FastForward</f>                    <!-- original -->
+      <r>Rewind</r>                         <!-- original -->
+      <pageup>StepForward</pageup>          <!-- Rebinded -->
+      <pagedown>StepBack</pagedown>         <!-- Rebinded -->
+      <f7>SkipNext</f7>                     <!-- Rebinded -->
+      <f8>SkipPrevious</f8>                 <!-- Rebinded -->
+      <return>OSD</return>                  <!-- original -->
+      <enter>OSD</enter>                    <!-- original -->
+      <t>OSD</t>                            <!-- Rebinded -->
+      <v>Playlist</v>                       <!-- Rebinded -->
+      <m>Mute</m>                           <!-- Rebinded -->
+      <f10>Info</f10>                       <!-- Rebinded -->
+      <left>StepBack</left>                 <!-- original -->
+      <right>StepForward</right>            <!-- original -->
+      <up>ChapterOrBigStepForward</up>      <!-- original -->
+      <down>ChapterOrBigStepBack</down>     <!-- original -->
+      <f11>Playlist</f11>                   <!-- Rebinded -->
     </keyboard>
   </FullscreenVideo>
 
   <FullscreenInfo>
     <keyboard>
-      <f>FastForward</f>                     <!-- original -->
-      <r>Rewind</r>                          <!-- original -->
-      <pageup>StepForward</pageup>           <!-- Rebinded -->
-      <pagedown>StepBack</pagedown>          <!-- Rebinded -->
-      <f7>SkipNext</f7>                      <!-- Rebinded -->
-      <f8>SkipPrevious</f8>                  <!-- Rebinded -->
-      <t>OSD</t>                             <!-- Rebinded -->
-      <f1>OSD</f1>                           <!-- Rebinded -->
-      <m>Mute</m>                            <!-- Rebinded -->
+      <f>FastForward</f>                    <!-- original -->
+      <r>Rewind</r>                         <!-- original -->
+      <pageup>StepForward</pageup>          <!-- Rebinded -->
+      <pagedown>StepBack</pagedown>         <!-- Rebinded -->
+      <f7>SkipNext</f7>                     <!-- Rebinded -->
+      <f8>SkipPrevious</f8>                 <!-- Rebinded -->
+      <t>OSD</t>                            <!-- Rebinded -->
+      <v>Playlist</v>                       <!-- Rebinded -->
+      <m>Mute</m>                           <!-- Rebinded -->
     </keyboard>
   </FullscreenInfo>
 
   <Visualisation>
     <keyboard>
-      <f>FastForward</f>                     <!-- original -->
-      <r>Rewind</r>                          <!-- original -->
-      <pageup>IncreaseRating</pageup>        <!-- original -->
-      <pagedown>DecreaseRating</pagedown>    <!-- original -->
-      <return>OSD</return>                   <!-- original -->
-      <enter>OSD</enter>                     <!-- original -->
-      <t>OSD</t>                             <!-- Rebinded -->
-      <f1>OSD</f1>                           <!-- Rebinded -->
-      <m>Mute</m>                            <!-- Rebinded -->
-      <f10>Info</f10>                        <!-- Rebinded -->
-      <p>PlayPause</p>                       <!-- Rebinded -->
-      <left>StepBack</left>                  <!-- original -->
-      <right>StepForward</right>             <!-- original -->
-      <up>SkipNext</up>                      <!-- original -->
-      <down>SkipPrevious</down>              <!-- original -->
+      <f>FastForward</f>                    <!-- original -->
+      <r>Rewind</r>                         <!-- original -->
+      <pageup>IncreaseRating</pageup>       <!-- original -->
+      <pagedown>DecreaseRating</pagedown>   <!-- original -->
+      <return>OSD</return>                  <!-- original -->
+      <enter>OSD</enter>                    <!-- original -->
+      <t>OSD</t>                            <!-- Rebinded -->
+      <v>Playlist</v>                       <!-- Rebinded -->
+      <m>Mute</m>                           <!-- Rebinded -->
+      <f10>Info</f10>                       <!-- Rebinded -->
+      <p>PlayPause</p>                      <!-- Rebinded -->
+      <left>StepBack</left>                 <!-- original -->
+      <right>StepForward</right>            <!-- original -->
+      <up>SkipNext</up>                     <!-- original -->
+      <down>SkipPrevious</down>             <!-- original -->
     </keyboard>
   </Visualisation>
 
   <MusicOSD>
     <keyboard>
-      <f>FastForward</f>                     <!-- original -->
-      <r>Rewind</r>                          <!-- original -->
-      <f7>SkipNext</f7>                      <!-- Rebinded -->
-      <f8>SkipPrevious</f8>                  <!-- Rebinded -->
-      <t>Back</t>                            <!-- Rebinded -->
-      <f1>Back</f1>                          <!-- Rebinded -->
-      <m>Mute</m>                            <!-- Rebinded -->
-      <f10>Info</f10>                        <!-- Rebinded -->
-      <p>PlayPause</p>                       <!-- Rebinded -->
+      <f>FastForward</f>                    <!-- original -->
+      <r>Rewind</r>                         <!-- original -->
+      <f7>SkipNext</f7>                     <!-- Rebinded -->
+      <f8>SkipPrevious</f8>                 <!-- Rebinded -->
+      <t>Back</t>                           <!-- Rebinded -->
+      <v>Playlist</v>                       <!-- Rebinded -->
+      <m>Mute</m>                           <!-- Rebinded -->
+      <f10>Info</f10>                       <!-- Rebinded -->
+      <p>PlayPause</p>                      <!-- Rebinded -->
     </keyboard>
   </MusicOSD>
 
   <SlideShow>
     <keyboard>
-      <zero>ZoomNormal</zero>                <!-- original -->
-      <one>ZoomLevel1</one>                  <!-- original -->
-      <two>ZoomLevel2</two>                  <!-- original -->
-      <three>ZoomLevel3</three>              <!-- original -->
-      <four>ZoomLevel4</four>                <!-- original -->
-      <five>ZoomLevel5</five>                <!-- original -->
-      <six>ZoomLevel6</six>                  <!-- original -->
-      <seven>ZoomLevel7</seven>              <!-- original -->
-      <eight>ZoomLevel8</eight>              <!-- original -->
-      <nine>ZoomLevel9</nine>                <!-- original -->
-      <f10>Info</f10>                        <!-- Rebinded -->
-      <f7>NextPicture</f7>                   <!-- Rebinded -->
-      <f8>PreviousPicture</f8>               <!-- Rebinded -->
-      <minus>ZoomOut</minus>                 <!-- original -->
-      <plus>ZoomIn</plus>                    <!-- original -->
-      <numpadminus>ZoomOut</numpadminus>     <!-- Rebinded -->
-      <numpadplus>ZoomIn</numpadplus>        <!-- Rebinded -->
-      <return>Rotate</return>                <!-- original -->
-      <enter>Rotate</enter>                  <!-- original -->
-      <r>Rotate</r>                          <!-- original -->
+      <zero>ZoomNormal</zero>               <!-- original -->
+      <one>ZoomLevel1</one>                 <!-- original -->
+      <two>ZoomLevel2</two>                 <!-- original -->
+      <three>ZoomLevel3</three>             <!-- original -->
+      <four>ZoomLevel4</four>               <!-- original -->
+      <five>ZoomLevel5</five>               <!-- original -->
+      <six>ZoomLevel6</six>                 <!-- original -->
+      <seven>ZoomLevel7</seven>             <!-- original -->
+      <eight>ZoomLevel8</eight>             <!-- original -->
+      <nine>ZoomLevel9</nine>               <!-- original -->
+      <f10>Info</f10>                       <!-- Rebinded -->
+      <f7>NextPicture</f7>                  <!-- Rebinded -->
+      <f8>PreviousPicture</f8>              <!-- Rebinded -->
+      <minus>ZoomOut</minus>                <!-- original -->
+      <plus>ZoomIn</plus>                   <!-- original -->
+      <numpadminus>ZoomOut</numpadminus>    <!-- Rebinded -->
+      <numpadplus>ZoomIn</numpadplus>       <!-- Rebinded -->
+      <return>Rotate</return>               <!-- original -->
+      <enter>Rotate</enter>                 <!-- original -->
+      <r>Rotate</r>                         <!-- original -->
     </keyboard>
   </SlideShow>
 
   <VideoOSD>
     <keyboard>
-      <t>Back</t>                            <!-- Rebinded -->
-      <f1>Back</f1>                          <!-- Rebinded -->
-      <m>Mute</m>                            <!-- Rebinded -->
-      <f10>Info</f10>                        <!-- Rebinded -->
+      <t>Back</t>                           <!-- Rebinded -->
+      <v>Playlist</v>                       <!-- Rebinded -->
+     <m>Mute</m>                            <!-- Rebinded -->
+      <f10>Info</f10>                       <!-- Rebinded -->
     </keyboard>
   </VideoOSD>
 
   <VideoMenu>
     <keyboard>
-      <t>Back</t>                            <!-- Rebinded -->
-      <f1>Back</f1>                          <!-- Rebinded -->
-      <m>Mute</m>                            <!-- Rebinded -->
-      <f10>Info</f10>                        <!-- Rebinded -->
-      <return>Select</return>                <!-- original -->
-      <enter>Select</enter>                  <!-- original -->
-      <pageup>SkipNext</pageup>              <!-- original -->
-      <pagedown>SkipPrevious</pagedown>      <!-- original -->
+      <t>Back</t>                           <!-- Rebinded -->
+      <v>Playlist</v>                       <!-- Rebinded -->
+      <m>Mute</m>                           <!-- Rebinded -->
+      <f10>Info</f10>                       <!-- Rebinded -->
+      <return>Select</return>               <!-- original -->
+      <enter>Select</enter>                 <!-- original -->
+      <pageup>SkipNext</pageup>             <!-- original -->
+      <pagedown>SkipPrevious</pagedown>     <!-- original -->
     </keyboard>
   </VideoMenu>
 
   <OSDVideoSettings>
     <keyboard>
-      <f10>Info</f10>                        <!-- Rebinded -->
+      <f10>Info</f10>                       <!-- Rebinded -->
     </keyboard>
   </OSDVideoSettings>
 
   <OSDAudioSettings>
     <keyboard>
-      <f10>Info</f10>                        <!-- Rebinded -->
+      <f10>Info</f10>                       <!-- Rebinded -->
     </keyboard>
   </OSDAudioSettings>
 
   <VideoBookmarks>
     <keyboard>
-      <f2>Delete</f2>                        <!-- Rebinded -->
+      <d>Delete</d>                         <!-- Rebinded -->
     </keyboard>
   </VideoBookmarks>
 
   <Videos>
     <keyboard>
-      <f11>Playlist</f11>                    <!-- Rebinded -->
+      <f11>Playlist</f11>                   <!-- Rebinded -->
     </keyboard>
   </Videos>
 
   <VideoPlaylist>
     <keyboard>
-      <f2>Delete</f2>                        <!-- Rebinded -->
-      <e>MoveItemUp</e>                      <!-- Rebinded -->
-      <f9>MoveItemDown</f9>                  <!-- Rebinded -->
+      <d>Delete</d>                         <!-- Rebinded -->
+      <e>MoveItemUp</e>                     <!-- Rebinded -->
+      <f9>MoveItemDown</f9>                 <!-- Rebinded -->
     </keyboard>
 
   </VideoPlaylist>
   <Pictures>
     <keyboard>
-      <e>MoveItemUp</e>                      <!-- Rebinded -->
-      <f9>MoveItemDown</f9>                  <!-- Rebinded -->
-      <f2>noop</f2>                          <!-- Rebinded -->
+      <e>MoveItemUp</e>                     <!-- Rebinded -->
+      <f9>MoveItemDown</f9>                 <!-- Rebinded -->
+      <d>noop</d>                           <!-- Rebinded -->
     </keyboard>
   </Pictures>
 
   <Favourites>
     <keyboard>
-      <backspace>Close</backspace>           <!-- original -->
-      <e>MoveItemUp</e>                      <!-- Rebinded -->
-      <f9>MoveItemDown</f9>                  <!-- Rebinded -->
+      <backspace>Close</backspace>          <!-- original -->
+      <e>MoveItemUp</e>                     <!-- Rebinded -->
+      <f9>MoveItemDown</f9>                 <!-- Rebinded -->
     </keyboard>
   </Favourites>
   
