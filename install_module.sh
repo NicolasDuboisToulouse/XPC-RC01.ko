@@ -1,3 +1,4 @@
+#!/bin/sh
 INVALID_MODULE=hid_zydacron
 MODULE=hid-xpc-rc01.ko
 HERE=$(cd `dirname $0`; pwd)

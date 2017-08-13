@@ -3,19 +3,11 @@ obj-m += $(BASENAME).o
 obj-c += $(BASENAME).c
 
 KDIR := /lib/modules/$(shell uname -r)/build
-MODULEDIR := /lib/modules/$(shell uname -r)/kernel/drivers/hid
-
 
 PWD := $(shell pwd)
 
 ${obj-m}: ${obj-c}
 	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
-
-install: ${obj-m}
-	cp ${obj-m} $(MODULEDIR)
-
-uninstall:
-	rm -f $(MODULEDIR)/${obj-m}
 
 clean:
 	rm -f .$(BASENAME)* $(BASENAME).ko $(BASENAME).o $(BASENAME).mod.* modules.order Module.symvers *~

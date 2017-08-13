@@ -25,6 +25,14 @@ The keycodes are all standard ones, no *multimedia* keys. (i.e. all code are < 1
 You have to map your harmony remove regarding the devide you want to control.
 If some keys are not fine for your usage, you have to modify the driver (or change the keyboard mapping). There is no configuration files.
 
+How to use the module
+---------------------
+* Build the module (refer to your distribution documentation, you may need yust to install `kernel_header` and run `make`,
+* Edit `xpc.service` and update `ExecStart` line with `install_module.sh` path,
+* Copy this file to `/etc/systemd/system/xpc.service`,
+* Enable service : `systemctl enable xpc.service`,
+* Reboot.
+
 Tested Devices
 --------------
 * Original : What send the original remove (I think, since I lost it). The key below it what I had recorded when I add it (maybe plus some keys from Harmony/MSI)

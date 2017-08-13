@@ -1,0 +1,9 @@
+[Unit]
+Description=Enable XPC-RC01
+
+[Service]
+Type=oneshot
+ExecStart=/home/opt/XPC-RC01.ko/install_module.sh
+
+[Install]
+WantedBy=multi-user.target
